@@ -5,7 +5,7 @@ import CheckoutForm from "./CheckoutForm";
 import './App.css'
 
 // Load Stripe.js with your publishable key
-const stripePromise = loadStripe("pk_test_51MleNfGu5HqbuovWch7BhkuNBuuQrvcgUPg9rCIwfTDeOcEidFaUgRCGLOlf97sYqbZxd6M14QsCTlBE6KAjJbCv00cJVHgV8c");
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
 const App = () => {
     const [clientSecret, setClientSecret] = useState("");
